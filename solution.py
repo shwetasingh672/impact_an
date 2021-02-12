@@ -1,14 +1,13 @@
 from collections import OrderedDict
 import sys
-inp = []
 
 class Cardboard(object):
-    def __init__(self,inp):
+    def __init__(self, inp):
         self.inp = inp
 
     def find_intersect(self):
         od = OrderedDict()
-        for item in inp:
+        for item in self.inp:
             height = int(item[2])
             for i in range(int(item[0]), int(item[1])):
                 if i not in od:
@@ -37,6 +36,7 @@ class Cardboard(object):
         return output
         
 def main():
+    inp = []
     line = input("Enter the list of tuples:\n")
     while(line != ''):
         inp.append(tuple(line.split())) 
